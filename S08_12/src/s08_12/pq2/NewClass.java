@@ -9,7 +9,7 @@ package s08_12.pq2;
  *
  * @author cga20
  */
-public class class3 {
+public class NewClass {
     public int a;
     private int b;
 }
