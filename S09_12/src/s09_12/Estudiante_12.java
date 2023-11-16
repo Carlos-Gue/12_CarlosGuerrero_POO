@@ -45,4 +45,10 @@ public class Estudiante_12 {
     public void saludar(String saludoPersonalizado) {
         System.out.println(saludoPersonalizado + " Soy " + nombre);
     }
+    public void presentarEstudiante() {
+        System.out.println("    =================    ");
+        System.out.println("    == Estudiante ==    ");
+        System.out.println("    =================    ");
+        System.out.println("");
+    }
 }

@@ -26,10 +26,19 @@ public class S09_12 {
         objcalculadora.responder();
         
         //ANIMAL
-        obpresentacion.presentacionOption();
-        Animal_12 obAnimal = new Animal_12();
-        obAnimal.preguntarAnimal();
-        obAnimal.informacionAnimal();
+        Animal_12 animal = new Animal_12();
+        animal.preguntarAnimal();
+        animal.presentarAnimal();
+        animal.informacionAnimal();
+        
+        
+        //ESTUDIANTE
+        Estudiante_12 obEstudiante = new Estudiante_12();
+        obEstudiante.presentarEstudiante();
+        obEstudiante.mostrarInformacion();
+        obEstudiante.obtenerNombreCompleto();
+        obEstudiante.saludar();
+        obEstudiante.saludar("carlos");
     }
     
 }
