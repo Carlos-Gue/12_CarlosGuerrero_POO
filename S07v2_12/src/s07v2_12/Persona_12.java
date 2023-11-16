@@ -10,38 +10,43 @@ package s07v2_12;
  * @author cga20
  */
 public class Persona_12 {
+    // Atributos
     String nombre;
     int edad;
+    double altura;
 
-    public String presentarse() {
-        return "Hola, mi nombre es " + nombre + " y tengo " + edad + " años.";
+    // Constructor
+    public Persona_12(String nombre, int edad, double altura) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.altura = altura;
     }
 
-    public void Edad() {
-        System.out.println("Tengo " + edad + " años");
+    // Métodos
+    // Sobrecarga de métodos
+    public void saludar() {
+        System.out.println("Hola, soy " + nombre);
     }
 
-    public void acciones() {
-        System.out.println("Estoy Caminando");
+    public void saludar(String nombre) {
+        System.out.println("Hola, soy " + nombre);
     }
 
-    public int edadEnDias() {
-        return edad * 365;
+    // Métodos con valores de retorno
+    public double calcularEdadPromedio(Persona_12 persona1, Persona_12 persona2) {
+        return (persona1.edad + persona2.edad) / 2.0;
     }
 
-    public int ObtenerEdad(int par) {
-        return edad;
+    public double calcularIMC() {
+        return altura / Math.pow(edad, 2);
     }
 
-    public String getNombre() {
-        return nombre;
+    // Métodos con parámetros y argumentos
+    public void subirEdad(int cantidad) {
+        edad += cantidad;
     }
 
-    public boolean esMayorDeEdad() {
-        return edad >= 18;
-    }
-
-    public boolean esMayorDeEdad(int edadLimite) {
-        return edad >= edadLimite;
+    public void aumentarAltura(double cantidad) {
+        altura += cantidad;
     }
 }

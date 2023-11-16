@@ -15,25 +15,29 @@ public class S07v2_12 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Persona_12 persona1 = new Persona_12();
-        persona1.nombre = "Victor";
-        persona1.edad = 26;
+// Crear objetos
+        Persona_12 persona1 = new Persona_12("Juan", 25, 1.80);
+        Persona_12 persona2 = new Persona_12("Pedro", 30, 1.70);
 
-        Persona_12 persona2 = new Persona_12();
-        persona2.nombre = "Lucia";
-        persona2.edad = 23;
+        // Invocar métodos
+        persona1.saludar();
+        persona2.saludar("Marta");
 
-        System.out.println(persona1.presentarse());
-        persona1.Edad();
+        // Obtener el valor de retorno de un método
+        double edadPromedio = persona1.calcularEdadPromedio(persona1, persona2);
+        System.out.println("La edad promedio es: " + edadPromedio);
 
-        System.out.println("La edad de " + persona1.getNombre() + " en días es: " + persona1.edadEnDias());
-        System.out.println("¿Es mayor de edad? " + (persona1.esMayorDeEdad() ? "Sí" : "No"));
+        // Invocar un método con parámetros y argumentos
+        persona1.subirEdad(5);
+        persona2.aumentarAltura(0.20);
 
-        System.out.println();
+        // Imprimir los atributos de los objetos
+        System.out.println("El nombre de la persona 1 es: " + persona1.nombre);
+        System.out.println("La edad de la persona 1 es: " + persona1.edad);
+        System.out.println("La altura de la persona 1 es: " + persona1.altura);
 
-        System.out.println(persona2.presentarse());
-        persona2.Edad();
-        System.out.println("La edad de " + persona2.getNombre() + " en días es: " + persona2.edadEnDias());
-        System.out.println("¿Es mayor de 18 años? " + (persona2.esMayorDeEdad() ? "Sí" : "No"));  
+        System.out.println("El nombre de la persona 2 es: " + persona2.nombre);
+        System.out.println("La edad de la persona 2 es: " + persona2.edad);
+        System.out.println("La altura de la persona 2 es: " + persona2.altura);
     }    
 }
